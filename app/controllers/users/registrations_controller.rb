@@ -52,12 +52,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
-    new_user_consumer_path(current_user.id)
+    case resource
+    when User
+      new_user_consumer_path(current_user.id)
+    when BusinessUser
+      new_business_user_business_path(current_business_user.id)
+    end
     # super(resource)
   end
 
   # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
+  def after_inactive_sign_up_path_for(resource)
+    new_user_consumer_path(current_user.id)
   #   super(resource)
-  # end
+  end
 end
