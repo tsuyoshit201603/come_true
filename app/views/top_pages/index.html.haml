@@ -1,5 +1,6 @@
 トップページ
 = link_to "サインイン", new_user_session_path
+= link_to "サインアウト", destroy_user_session_path, method: :delete
 %br
 - if user_signed_in?
   %h2 サインインしています！
