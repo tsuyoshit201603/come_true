@@ -5,7 +5,6 @@ class ConsumersController < ApplicationController
 
   def create
     consumer = Consumer.new(consumer_params)
-    # binding pry
     consumer.save
     redirect_to root_path
   end
