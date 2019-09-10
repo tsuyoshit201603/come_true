@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :business_users do
     resources :businesses, only: [:new, :create]
   end
-  resources :ideas, only: [:index, :new, :show, :destroy]
+  resources :ideas, only: [:index, :new, :create, :show, :destroy]
 end
