@@ -1,14 +1,21 @@
-トップページ
-= link_to "一般用サインイン", new_user_session_path
-= link_to "企業用サインイン", new_business_user_session_path
-= link_to "一般用サインアウト", destroy_user_session_path, method: :delete
-= link_to "企業用サインアウト", destroy_user_session_path, method: :delete
-%br
-- if user_signed_in?
-  %h2 一般ユーザーはサインインしています！
-- else
-  %h3 一般ユーザーはサインインしていません。
-- if business_user_signed_in?
-  %h2 企業ユーザーはサインインしています！
-- else
-  %h3 企業ユーザーはサインインしていません。
+.body
+  .body__head
+    新規登録・ログイン
+  .body__box
+    = link_to new_user_session_path, class: "body__box__con" do
+      .body__box__con
+        一般ユーザー
+    = link_to new_business_user_session_path, class: "body__box__bus" do
+      .body__box__bus
+        企業
+  = link_to "一般用サインアウト", destroy_user_session_path, method: :delete
+  = link_to "企業用サインアウト", destroy_user_session_path, method: :delete
+  %br
+  - if user_signed_in?
+    %h2 一般ユーザーはサインインしています！
+  - else
+    %h3 一般ユーザーはサインインしていません。
+  - if business_user_signed_in?
+    %h2 企業ユーザーはサインインしています！
+  - else
+    %h3 企業ユーザーはサインインしていません。
