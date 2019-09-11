@@ -7,14 +7,25 @@ body {
   height: 80px;
   background-color: #023859;
   color: #B4C4D9;
-  &__text {
-    font-size: 12px;
-  }
+  display: flex;
+  line-height: 80px;
   &__title {
     font-size: 30px;
     font-weight: bold;
     color: #B4C4D9;
     text-decoration: none;
+  }
+  &__make {
+    font-size: 20px;
+    margin-left: auto;
+  }
+  &__mypage {
+    font-size: 20px;
+    margin-left: 15px;
+  }
+  &__signout {
+    font-size: 20px;
+    margin-left: 15px;
   }
 }
 
@@ -53,4 +64,8 @@ body {
       text-decoration: none;
     }
   }
+}
+
+.reset__a {
+  @include reset_a-tag(#B4C4D9);
 }
