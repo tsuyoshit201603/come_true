@@ -1,7 +1,7 @@
 .header
   - if user_signed_in?
     .header__title
-      = link_to ideas_path, class: "header__title" do
+      = link_to business_users_path, class: "header__title" do
         Come_true
         = fa_icon "child"
     .header__make
@@ -15,9 +15,10 @@
         サインアウト
   - elsif business_user_signed_in?
     .header__title
-      = link_to root_path, class: "header__title" do
+      = link_to ideas_path, class: "header__title" do
         Come_true
         = fa_icon "child"
+    .header__make
     .header__mypage
       = link_to root_path, class: "reset__a" do
         マイページ
