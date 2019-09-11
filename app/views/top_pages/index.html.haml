@@ -9,7 +9,7 @@
       .body__box__bus
         企業
   = link_to "一般用サインアウト", destroy_user_session_path, method: :delete
-  = link_to "企業用サインアウト", destroy_user_session_path, method: :delete
+  = link_to "企業用サインアウト", destroy_business_user_session_path, method: :delete
   %br
   - if user_signed_in?
     %h2 一般ユーザーはサインインしています！

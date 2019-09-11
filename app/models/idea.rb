@@ -1,4 +1,4 @@
 class Idea < ApplicationRecord
-  belongs_to :consumer
-  belongs_to :business
+  belongs_to :consumer, optional: true
+  belongs_to :business, optional: true
 end

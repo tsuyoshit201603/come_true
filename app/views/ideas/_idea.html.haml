@@ -1,0 +1,14 @@
+.ideas__content
+  .ideas__content__title
+    = idea.name
+  .ideas__content__body
+    .ideas__content__body__text
+      説明：
+      = idea.text
+    .ideas__content__body__time
+      投稿時刻：
+      = idea.created_at.strftime("%Y-%m-%d %H:%M")
+  .ideas__content__bottom
+    .ideas__content__btn
+      = link_to root_path do
+        詳細
