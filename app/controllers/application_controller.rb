@@ -3,7 +3,12 @@ class ApplicationController < ActionController::Base
  
 
   def after_sign_in_path_for(resource)
-    ideas_path
+    case resource
+    when User
+      business_users_path
+    when BusinessUser
+      ideas_path
+    end
   end
   protected
  
