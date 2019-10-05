@@ -3,4 +3,31 @@
     font-size: 40px;
     font-weight: bold;
   }
+  &__contents {
+    display: flex;
+    flex-flow: row wrap;
+    &__content {
+      width: 20%;
+      border: 1px solid #B4C4D9;
+      margin: 0 30px 50px 0;
+      &__name {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+      }
+      &__image {
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+      }
+      &__bottom {
+        display: flex;
+        &__btn {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 }

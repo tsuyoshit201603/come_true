@@ -1,3 +1,12 @@
-.businesses__content
-  .businesses__content__title
+.businesses__contents__content
+  .businesses__contents__content__name
     = business_user.name
+  .businesses__contents__content__image
+    = image_tag "https://4.bp.blogspot.com/-izqPA1NEZj0/VCkbhS-qzLI/AAAAAAAAnIQ/rg1czMp1tpI/s400/jishin_building_before.png", class: "businesses__contents__content__image"
+  .businesses__contents__content__bottom
+    .businesses__contents__content__bottom__btn
+      =link_to root_path do
+        詳細
+    .businesses__contents__content__bottom__btn
+      =link_to root_path do
+        提案する
