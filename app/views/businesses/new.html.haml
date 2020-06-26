@@ -1,0 +1,11 @@
+business登録画面
+= form_with model: @business, url: business_user_businesses_path, local: true do |f|
+  = f.label :phone_num, "電話番号（必須）"
+  = f.phone_field :phone_num
+  = f.label :capital, "資本金（任意）"
+  = f.text_field :capital
+  = f.label :type, "業種（必須）"
+  = f.text_field :type
+  = f.label :text, "自由記入欄（任意）"
+  = f.text_area :text
+  = f.submit "登録"

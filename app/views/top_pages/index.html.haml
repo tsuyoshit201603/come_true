@@ -1,1 +1,10 @@
-トップページ
+.body
+  .body__head
+    新規登録・ログイン
+  .body__box
+    = link_to new_user_session_path, class: "body__box__con" do
+      .body__box__con
+        一般ユーザー
+    = link_to new_business_user_session_path, class: "body__box__bus" do
+      .body__box__bus
+        企業

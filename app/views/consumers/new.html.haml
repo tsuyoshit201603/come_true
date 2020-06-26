@@ -1,0 +1,11 @@
+consumer登録ページ
+= form_with model: @consumer, url: user_consumers_path, local: true do |f|
+  = f.label :age, "年齢（必須）"
+  = f.number_field :age
+  = f.label :job, "職業（必須）"
+  = f.text_field :job
+  = f.label :phone_num, "電話番号（必須）"
+  = f.phone_field :phone_num
+  = f.label :text, "自由記入欄（任意）"
+  = f.text_area :text
+  = f.submit "登録"
